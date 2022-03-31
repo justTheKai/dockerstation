@@ -7,7 +7,7 @@ FROM node:16
 RUN git clone https://github.com/kunalnagarco/imdb-scraper /app
 WORKDIR /app
 RUN npm install --force
-RUN npm install husky -g
+RUN npm install husky -g && npm audit fix --force
 
 #Prepare our image to run different commands depending on the enviroment
 ARG NODE_ENV
