@@ -5,7 +5,7 @@ services:
     build:
       context: .
     restart: on-failure
-    command: npm start
+    command: yarn run
     ports:
         - "3000:3000"
     volumes:
