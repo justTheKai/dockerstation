@@ -5,7 +5,7 @@ services:
     build:
       context: .
     restart: on-failure
-    command: yarn run
+    command: yarn start
     ports:
         - "3000:3000"
     volumes:
