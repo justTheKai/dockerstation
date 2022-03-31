@@ -6,16 +6,13 @@ FROM node:16
 # where available (npm@5+)
 RUN git clone https://github.com/kunalnagarco/imdb-scraper /app
 WORKDIR /app
-RUN npm install --force
-RUN npm install husky -g && npm audit fix --force
+
+RUN yarn add husky -g && yarn install 
 
 #Prepare our image to run different commands depending on the enviroment
-ARG NODE_ENV
-RUN if [ "$NODE_ENV" = "development" ]; \
-        then npm install; \
-        else npm install --only=production; \
-        fi
-ENV NODE_PATH=/app/node_modules
+
+ENV NPM_CONFIG_PREFIX=/home/node/.npm-global
+ENV PATH=$PATH:/home/node/.npm-global/bin
 # Bundle app source
 
 # env variable port with default = 3000
@@ -25,4 +22,4 @@ ENV PORT 3000
 # Application (Node APP) listening on port 3000.
 EXPOSE $PORT
 # CMD ["npm", "run", "dev"] in production
-CMD ["npm", "start"]
+CMD ["yarn", "start"]
