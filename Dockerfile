@@ -8,6 +8,7 @@ WORKDIR /app
 RUN git clone https://github.com/kunalnagarco/imdb-scraper .
 
 RUN npm install --force
+RUN npm install husky -g
 
 #Prepare our image to run different commands depending on the enviroment
 ARG NODE_ENV
