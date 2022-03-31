@@ -15,7 +15,7 @@ RUN if [ "$NODE_ENV" = "development" ]; \
         then npm install; \
         else npm install --only=production; \
         fi
-
+ENV NODE_PATH=/app/node_modules
 # Bundle app source
 
 # env variable port with default = 3000
