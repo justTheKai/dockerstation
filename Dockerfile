@@ -7,9 +7,8 @@ WORKDIR /app
 # where available (npm@5+)
 RUN git clone https://github.com/kunalnagarco/imdb-scraper .
 
-RUN npm install -g yarn
+RUN npm install
 
-RUN yarn install && yarn build
 #Prepare our image to run different commands depending on the enviroment
 ARG NODE_ENV
 RUN if [ "$NODE_ENV" = "development" ]; \
