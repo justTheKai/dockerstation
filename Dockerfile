@@ -7,7 +7,7 @@ FROM node:16
 RUN git clone https://github.com/kunalnagarco/imdb-scraper /app
 WORKDIR /app
 
-RUN yarn add husky -g && yarn install 
+RUN yarn add husky -g && yarn install  && yarn build
 
 #Prepare our image to run different commands depending on the enviroment
 
