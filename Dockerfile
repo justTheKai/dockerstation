@@ -15,7 +15,7 @@ ENV PATH /app/node_modules/.bin:$PATH
 # Bundle app source
 
 # env variable port with default = 3000
-ENV PORT 3000
+ENV PORT 8080
 
 # Port to send traffic on the container.
 # Application (Node APP) listening on port 3000.
