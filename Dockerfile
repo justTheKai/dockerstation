@@ -1,12 +1,11 @@
 FROM node:16
 
 # Create app directory
-WORKDIR /app
 # Install app dependencies
 # A wildcard is used to ensure both package.json AND package-lock.json are copied
 # where available (npm@5+)
-RUN git clone https://github.com/kunalnagarco/imdb-scraper .
-
+RUN git clone https://github.com/kunalnagarco/imdb-scraper /app
+WORKDIR /app
 RUN npm install --force
 RUN npm install husky -g
 
