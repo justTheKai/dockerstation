@@ -18,7 +18,6 @@ RUN if [ "$NODE_ENV" = "development" ]; \
         fi
 
 # Bundle app source
-COPY . ./
 
 # env variable port with default = 3000
 ENV PORT 3000
