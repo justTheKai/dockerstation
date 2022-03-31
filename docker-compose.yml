@@ -1,0 +1,7 @@
+﻿version: '3.9'
+
+services:
+  imdb:
+    build:
+      context: .
+    restart: on-failure
