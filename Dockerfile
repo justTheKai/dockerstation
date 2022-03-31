@@ -11,8 +11,7 @@ RUN yarn add husky -g && yarn install
 
 #Prepare our image to run different commands depending on the enviroment
 
-ENV NPM_CONFIG_PREFIX=/home/node/.npm-global
-ENV PATH=$PATH:/home/node/.npm-global/bin
+ENV PATH /app/node_modules/.bin:$PATH
 # Bundle app source
 
 # env variable port with default = 3000
