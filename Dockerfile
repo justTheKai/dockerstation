@@ -5,7 +5,7 @@ WORKDIR /app
 # Install app dependencies
 # A wildcard is used to ensure both package.json AND package-lock.json are copied
 # where available (npm@5+)
-git clone https://github.com/kunalnagarco/imdb-scraper .
+RUN git clone https://github.com/kunalnagarco/imdb-scraper .
 
 # If you are building your code for production RUN npm install
 RUN npm install
